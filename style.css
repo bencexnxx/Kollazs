@@ -1,25 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 a{
   text-decoration: none;
 }
 button{
-  font-family: 'Bebas Neue', cursive;
   border-radius: 5px;
 }
 body{
-  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  font-family: 'Pacifico', cursive;;
+}
+button{
+    border-radius: 25px;
+    background-color: darkcyan;
+}
+a{
+  color: aqua;
+  text-decoration: none;
 }
 .sidebar {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #371a3a;
+  background-color: #f1f1f1;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
-
 
 .sidebar a {
   display: block;
@@ -28,18 +35,16 @@ body{
   text-decoration: none;
 }
 
-
 .sidebar a.active {
-  background-color: #48e0d4;
-  color: rgb(25, 47, 143);
+ 
+  background-color: #9e06e8;
+  color: rgb(218, 34, 34);
 }
-
 
 .sidebar a:hover:not(.active) {
   background-color: #555;
-  color: rgb(182, 31, 119);
+  color: rgb(199, 33, 33);
 }
-
 
 div.content {
   margin-left: 200px;
@@ -47,21 +52,25 @@ div.content {
   height: 1000px;
 }
 
-
 @media screen and (max-width: 700px) {
   .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+      width: 100%;
+      height: auto;
+      position: relative;
   }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
 
+  .sidebar a {
+      float: left;
+  }
+
+  div.content {
+      margin-left: 0;
+  }
+}
 
 @media screen and (max-width: 400px) {
   .sidebar a {
-    
-    float: none;
+      text-align: center;
+      float: none;
   }
 }
