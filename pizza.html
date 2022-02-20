@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
@@ -20,24 +24,56 @@
     <meta name="theme-color" content="#ffffff">
      
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KB oldala</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div class="sidebar">
-        <a class="active" href=" https://bencexnxx.github.io/Kollazs/">HOME</a>
+        <a  href=" https://bencexnxx.github.io/Kollazs/">HOME</a>
         <a href="https://bencexnxx.github.io/Kollazs/keplink.html">KÉPLINK</a>
         <a href="https://bencexnxx.github.io/Kollazs/listak.html">LISTÁK</a>
         <a href="https://bencexnxx.github.io/Kollazs/orarend.html">ÓRAREND</a>
+        <a class="active" href="https://github.com/bencexnxx/Kollazs/blob/main/pizza.html">PIZZA</a>
     </div>
-<h3>Felhasználónév</h3>
-<input type='text'>
-<h3>Jelszó</h3>
-<input type='password'>
-<h3>Pizza rendelés</h3>
+    <div class="content">
+
+        <form name="rendeles">
+            <h1>Pizza Rendelés</h1>
+            <fieldset>
+                <legend>Renselő adatai:</legend>
+                <p><label>Név: <input type="text" name="nev">
+                        <small>Veznév Keresztnév</small></label></p>
+                <p><label>Telefonszám: <input type="tel" name="telefon" size="10"></label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Pizza mérete</legend>
+                <p><label><input type="radio" name="meret" value="kicsi">24cm</label></p>
+                <p><label><input type="radio" name="meret" value="nagy">38cm</label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Feltétek</legend>
+                <p><label><input type="checkbox" name="feltet1" value="sonka">sonka</label></p>
+                <p><label><input type="checkbox" name="feltet2" value="sajt">sajt</label></p>
+                <p><label><input type="checkbox" name="feltet3" value="gomba">szalámi</label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Rendelés</legend>
+                <p><label>mennyiség: <input type="number" name="mennyiseg"> db</label></p>
+                <p><label>egyéb feltét: <textarea name="egyeb"></textarea></label></p>
+                <p><label>Várható szállítási idő: <input type="time" name="kiszallitas"></label></p>
+                <br>
+                <input type="reset" name="visszaallitas">
+                <input type="submit" name="kuldes">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>Kántor Bence  © </p>
+    </div>
 
 </body>
+
 </html>
