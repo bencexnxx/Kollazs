@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+</head>
+
+<body>
+
+    <fieldset id="piri" style="width: 0%;">
+        <input type="text" id="felhasz" placeholder="felhasználónév.">
+        <br>
+        <input type="password" id="jelszo" placeholder="Jelszó">
+        <br>
+        <button onclick="belep(felhasz.value, jelszo.value)">OK</button>
+    </fieldset>
+    <br>
+
+    <button onclick="document.body.style.backgroundColor = 'red'">piros</button>
+    <button onclick="document.body.style.backgroundColor = 'coral'">coral</button>
+    <br><br>
+    <button onclick="szinezes()">Szín</button>
+    <button onclick="beiras(felhasz.value, jelszo.value)"> beír</button>
+    <button onclick="listazas()">Felhasználó,Felhasználók:</button>
+    <h1 id="siker"></h1>
+    <p id="lista"></p>
+
+    <script>
+
+        function listazas() {
+            var kk=""
+            for (i = 0; i < localStorage.length; i++) {
+                key = localStorage.key(i);
+                kk += ("<li>email:" + key + " | jelszó:" + localStorage.getItem(key) + "</li>");
+            }
+            document.getElementById("lista").innerHTML = kk
+        }
+
+        function beiras(felh, jelsz) {
+            localStorage.setItem(felh, jelsz)
+        }
+
+        function szinezes() {
+            document.getElementById('piri').style.backgroundColor = 'black'
+        }
+        function belep(username, password) {
+            if (username == "KantorBence") {
+                if (password == "Rozsaszin") {
+                    alert("Sikeres bejelentkezes:)")
+                    window.open('https://pepe1125.github.io/kollazs')
+                }
+            }
+            else {
+                document.getElementById("siker").innerHTML = "Belepes  megtagadva. Hibas felhasznalonev,jelszo"
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
